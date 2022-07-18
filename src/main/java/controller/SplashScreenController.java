@@ -24,6 +24,7 @@ public class SplashScreenController {
         KeyFrame keyFrame1 = new KeyFrame(Duration.millis(500), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+
                 lblLoad.setText("Loading Plugins ....");
             }
         });
@@ -37,14 +38,16 @@ public class SplashScreenController {
             public void handle(ActionEvent actionEvent) {
                 lblLoad.setText("Loading Resource ....");
             }
-        });KeyFrame keyFrame4 = new KeyFrame(Duration.millis(500), new EventHandler<ActionEvent>() {
+        });
+        KeyFrame keyFrame4 = new KeyFrame(Duration.millis(3500), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                URL resource = this.getClass().getResource("/veiw/TextEditor.fxml.fxml");
+                URL resource = this.getClass().getResource("/view/TextEditor.fxml");
                 try {
                     Parent container = FXMLLoader.load(resource);
                     Scene editorScene = new Scene(container);
                     Stage primaryStage = new Stage();
+                    primaryStage.setScene(editorScene);
                     primaryStage.setTitle("Dep-9-  Text Editor");
                     primaryStage.show();
                     primaryStage.centerOnScreen();

@@ -18,7 +18,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        URL splashResource = this.getClass().getResource("veiw/SplashForm.fxml");
+        URL splashResource = this.getClass().getResource("view/SplashForm.fxml");
         Parent splashContainer = FXMLLoader.load(splashResource);
         Scene splashScene = new Scene(splashContainer);
         splashScene.setFill(Color.TRANSPARENT);

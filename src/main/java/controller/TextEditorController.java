@@ -34,8 +34,10 @@ public class TextEditorController {
         btnAbout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                URL resource = this.getClass().getResource("/veiw/AboutForm.fxml");
+
+
                 try {
+                    URL resource = this.getClass().getResource("/view/AboutForm.fxml");
                     Parent load = FXMLLoader.load(resource);
                     Scene scene = new Scene(load);
                     Stage stage = new Stage();
